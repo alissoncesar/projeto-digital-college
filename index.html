@@ -26,17 +26,33 @@
 </head>
 <body class="bg-[#242424]">
     <div>
-        <div class="pt-5 pl-4">
+        <div id="pesquisa" class="pt-5 pl-4">
             <img src="logo.png" alt="" class="pb-4">
             <input type="text" placeholder="Qual grupo está procurando?" class="h-[40px] w-[368px] rounded-[5px] bg-[#333333] border-[2px] border-[#464646] font-sans text-[12px] text-[#555555] pl-4">
         </div>
-        <div>
-            <div class="flex items-center gap-[164px] px-4 pt-[26px]">
-                <h3 class="font-bold text-[#FFFFFF] text-[24px]">Teams</h3>
-                <div class="flex justify-center items-center gap-[14px] h-[40px] w-[125px] border-[2px] border-[#C81C6F] rounded-[5px]">
-                    <i class='bx bx-plus' style='color:#ffffff'  ></i>
-                    <h4 class="font-bold text-[12px] text-[#FFFFFF]">NOVO TEAM</h4>
-                </div>
+        <div id="cabecalho" class="flex items-center gap-[164px] px-4 py-[26px]">
+            <h3 class="font-bold text-[#FFFFFF] text-[24px]">Teams</h3>
+            <button class="flex justify-center items-center gap-[14px] h-[40px] w-[125px] border-[2px] border-[#C81C6F] rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                <i class='bx bx-plus' style='color:#ffffff'  ></i>
+                <h4 class="font-bold text-[12px] text-[#FFFFFF]">NOVO TEAM</h4>
+            </button>
+        </div>
+        <div id="nome-team" class="w-[368px] h-[249px] bg-[#333333] rounded-[10px] mx-4">
+            <div class="flex items-center gap-[177px] pt-4 px-4">
+                <h5 class="font-bold text-[18px] text-[#FFFFFF]">Nome do Team</h5>
+                <i class='bx bxs-show text-[22px]' style='color:#ffffff'  ></i>
+            </div>
+            <div class="mx-auto my-[26px] rounded-full w-[100px] h-[100px] bg-[#464646]">
+                <h3 class="text-[50px] text-[#FFFFFF] px-[36px]">0</h3>
+                <h5 class="text-[16px] font-bold text-[#FFFFFF] px-[40px] mb-[14px]">/0</h5>
+            </div>
+            <div class="flex gap-4 px-4">
+                <button class="h-[40px] w-[279px] border-[2px] border-[#C81C6F] rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                    <h4 class="font-bold text-[12px] text-[#FFFFFF]">ADICIONAR</h4>
+                </button>
+                <button class="h-[40px] w-[41px] border-[2px] border-[#C81C6F] rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                    <i class='bx bxs-trash-alt' style='color:#ffffff' ></i>
+                </button>
             </div>
         </div>
     </div>
