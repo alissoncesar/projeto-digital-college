@@ -18,42 +18,86 @@
                         sans: ['Open Sans', 'sans-serif']
                         },
                     colors: {
+                        'branco':'#FFFFFF',
+                        'pink': '#C81C6F',
+                        'cinza-escuro':'#333333',
+                        'cinza':'#464646',
+                        'cinza-claro':'#555555',
+                        'gray':'#242424'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-[#242424]">
+<body class="bg-gray">
     <div>
         <div id="pesquisa" class="pt-5 pl-4">
             <img src="logo.png" alt="" class="pb-4">
-            <input type="text" placeholder="Qual grupo está procurando?" class="h-[40px] w-[368px] rounded-[5px] bg-[#333333] border-[2px] border-[#464646] font-sans text-[12px] text-[#555555] pl-4">
+            <input type="text" placeholder="Qual grupo está procurando?" class="h-[40px] w-[368px] rounded-[5px] bg-cinza-escuro border-[2px] border-cinza font-sans text-[12px] text-cinza-claro pl-4">
         </div>
         <div id="cabecalho" class="flex items-center gap-[164px] px-4 py-[26px]">
-            <h3 class="font-bold text-[#FFFFFF] text-[24px]">Teams</h3>
-            <button class="flex justify-center items-center gap-[14px] h-[40px] w-[125px] border-[2px] border-[#C81C6F] rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+            <h3 class="font-bold text-branco text-[24px]">Teams</h3>
+            <button class="flex justify-center items-center gap-[14px] h-[40px] w-[125px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
                 <i class='bx bx-plus' style='color:#ffffff'  ></i>
-                <h4 class="font-bold text-[12px] text-[#FFFFFF]">NOVO TEAM</h4>
+                <h4 class="font-bold text-[12px] text-branco">NOVO TEAM</h4>
             </button>
         </div>
-        <div id="nome-team" class="w-[368px] h-[249px] bg-[#333333] rounded-[10px] mx-4">
+        <div id="nome-team" class="w-[368px] h-[249px] bg-cinza-escuro rounded-[10px] mx-4">
             <div class="flex items-center gap-[177px] pt-4 px-4">
-                <h5 class="font-bold text-[18px] text-[#FFFFFF]">Nome do Team</h5>
+                <h5 class="font-bold text-[18px] text-branco">Nome do Team</h5>
                 <i class='bx bxs-show text-[22px]' style='color:#ffffff'  ></i>
             </div>
-            <div class="mx-auto my-[26px] rounded-full w-[100px] h-[100px] bg-[#464646]">
-                <h3 class="text-[50px] text-[#FFFFFF] px-[36px]">0</h3>
-                <h5 class="text-[16px] font-bold text-[#FFFFFF] px-[40px] mb-[14px]">/0</h5>
+            <div class="mx-auto my-[26px] rounded-full w-[100px] h-[100px] bg-cinza">
+                <h3 class="text-[50px] text-branco px-[36px]">0</h3>
+                <h5 class="text-[16px] font-bold text-branco px-[40px] mb-[14px]">/0</h5>
             </div>
             <div class="flex gap-4 px-4">
-                <button class="h-[40px] w-[279px] border-[2px] border-[#C81C6F] rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
-                    <h4 class="font-bold text-[12px] text-[#FFFFFF]">ADICIONAR</h4>
+                <button class="h-[40px] w-[279px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                    <h4 class="font-bold text-[12px] text-branco">ADICIONAR</h4>
                 </button>
-                <button class="h-[40px] w-[41px] border-[2px] border-[#C81C6F] rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                <button class="h-[40px] w-[41px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
                     <i class='bx bxs-trash-alt' style='color:#ffffff' ></i>
                 </button>
             </div>
+        </div>
+    </div>
+    <div id="criar-team" class="w-full h-full fixed top-0 bg-black bg-opacity-50 hidden">
+        <div class="fixed top-60 w-[368px] h-[285px] rounded-[10px] mx-4 bg-gray">
+            <div class="flex justify-between items-center px-4 pt-5">
+                <h3 class="text-[24px] text-branco font-bold">CRIAR</h3>
+                <button><i class='bx bx-x text-[18px]' style='color:#ffffff'  ></i></button>
+            </div>
+            <form class="flex flex-col gap-3 px-4">
+                <div class="flex flex-col gap-[6px]">
+                    <label for="nome" class="text-[12px] text-branco font-bold">NOME DO TEAM</label>
+                    <input type="text" id="nome" class="h-[40px] w-[336px] rounded-[5px] bg-cinza-escuro border-[2px] border-cinza font-sans text-[12px] text-cinza-claro pl-4">
+                </div>
+                <div class="flex flex-col gap-[6px]">
+                    <label for="capacidade" class="text-[12px] text-branco font-bold">CAPACIDADE DO GRUPO</label>
+                    <input type="text" id="capacidade" class="h-[40px] w-[336px] rounded-[5px] bg-cinza-escuro border-[2px] border-cinza font-sans text-[12px] text-cinza-claro pl-4">
+                </div>
+                <button class="h-[40px] w-[336px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                    <h4 class="font-bold text-[12px] text-branco">CRIAR</h4>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="adicioar-participante" class="w-full h-full fixed top-0 bg-black bg-opacity-50">
+        <div class="fixed top-60 w-[368px] h-[225px] rounded-[10px] mx-4 bg-gray">
+            <div class="flex justify-between items-center px-4 pt-5">
+                <h3 class="text-[20px] text-branco font-bold">Adicionar participantes</h3>
+                <button><i class='bx bx-x text-[18px]' style='color:#ffffff'  ></i></button>
+            </div>
+            <form class="flex flex-col gap-3 px-4">
+                <div class="flex flex-col gap-[6px]">
+                    <label for="nome" class="text-[12px] text-branco font-bold">NOME DO PARTICIPANTE</label>
+                    <input type="text" id="nome" class="h-[40px] w-[336px] rounded-[5px] bg-cinza-escuro border-[2px] border-cinza font-sans text-[12px] text-cinza-claro pl-4">
+                </div>
+                <button class="h-[40px] w-[336px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                    <h4 class="font-bold text-[12px] text-branco">CRIAR</h4>
+                </button>
+            </form>
         </div>
     </div>
 </body>
