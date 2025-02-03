@@ -1,5 +1,6 @@
 function novoTeam() {
     document.getElementById('criar-team').style.display = "block";
+     document.getElementById('criar-team').style.display = "flex";
 }
 
 function fecharNovoTeam() {
@@ -8,6 +9,7 @@ function fecharNovoTeam() {
 
 function adicionarNome() {
     document.getElementById('adicionar-participante').style.display = "block";
+    document.getElementById('adicionar-participante').style.display = "flex";
 }
 
 function fecharAdicionarNome() {
