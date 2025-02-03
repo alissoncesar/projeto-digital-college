@@ -31,14 +31,17 @@
     </script>
 </head>
 <body class="bg-gray">
-    <div>
-        <div id="pesquisa" class="pt-5 pl-4">
-            <img src="logo.png" alt="" class="pb-4">
-            <input type="text" placeholder="Qual grupo está procurando?" class="h-[40px] w-[368px] rounded-[5px] bg-cinza-escuro border-[2px] border-cinza font-sans text-[12px] text-cinza-claro pl-4">
+    <div class="md:px-[100px]">
+        <div id="pesquisa" class="pt-5 md:pt-[25px] px-4 md:flex md:items-center  md:gap-[57px]">
+            <img src="logo.png" alt="" class="pb-4 md:pb-0">
+            <div class="flex justify-between items-center h-[40px] w-full md:w-[500px] rounded-[5px] bg-cinza-escuro border-[2px] border-cinza px-4">
+                <input type="text" placeholder="Qual grupo está procurando?" class="bg-transparent border-transparent focus:outline-none w-full font-sans text-[12px] text-cinza-claro">
+                <button><i class='bx bx-search-alt-2' style='color:#464646'  ></i></button>
+            </div>
         </div>
-        <div id="cabecalho" class="flex items-center gap-[164px] px-4 py-[26px]">
+        <div id="cabecalho" class="flex items-center justify-between px-4 py-[26px]">
             <h3 class="font-bold text-branco text-[24px]">Teams</h3>
-            <button class="flex justify-center items-center gap-[14px] h-[40px] w-[125px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+            <button id="novo-team" class="flex justify-center items-center gap-[14px] h-[40px] w-[125px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75" onclick="novoTeam()">
                 <i class='bx bx-plus' style='color:#ffffff'  ></i>
                 <h4 class="font-bold text-[12px] text-branco">NOVO TEAM</h4>
             </button>
@@ -46,14 +49,14 @@
         <div id="nome-team" class="w-[368px] h-[249px] bg-cinza-escuro rounded-[10px] mx-4">
             <div class="flex items-center gap-[177px] pt-4 px-4">
                 <h5 class="font-bold text-[18px] text-branco">Nome do Team</h5>
-                <i class='bx bxs-show text-[22px]' style='color:#ffffff'  ></i>
+                <button><i class='bx bxs-show text-[22px]' style='color:#ffffff'  ></i></button>
             </div>
             <div class="mx-auto my-[26px] rounded-full w-[100px] h-[100px] bg-cinza">
                 <h3 class="text-[50px] text-branco px-[36px]">0</h3>
                 <h5 class="text-[16px] font-bold text-branco px-[40px] mb-[14px]">/0</h5>
             </div>
             <div class="flex gap-4 px-4">
-                <button class="h-[40px] w-[279px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
+                <button class="h-[40px] w-[279px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75" onclick="adicionarNome()">
                     <h4 class="font-bold text-[12px] text-branco">ADICIONAR</h4>
                 </button>
                 <button class="h-[40px] w-[41px] border-[2px] border-pink rounded-[5px] transition duration-200 ease-in-out hover:opacity-75">
@@ -62,11 +65,11 @@
             </div>
         </div>
     </div>
-    <div id="criar-team" class="w-full h-full fixed top-0 bg-black bg-opacity-50 hidden">
+    <div id="criar-team" class="w-full h-full fixed top-0 bg-black bg-opacity-50 sm:flex sm:justify-center hidden sm:hidden ">
         <div class="fixed top-60 w-[368px] h-[285px] rounded-[10px] mx-4 bg-gray">
             <div class="flex justify-between items-center px-4 pt-5">
                 <h3 class="text-[24px] text-branco font-bold">CRIAR</h3>
-                <button><i class='bx bx-x text-[18px]' style='color:#ffffff'  ></i></button>
+                <button  onclick="fecharNovoTeam()"><i class='bx bx-x text-[18px]' style='color:#ffffff'  ></i></button>
             </div>
             <form class="flex flex-col gap-3 px-4">
                 <div class="flex flex-col gap-[6px]">
@@ -83,11 +86,11 @@
             </form>
         </div>
     </div>
-    <div id="adicioar-participante" class="w-full h-full fixed top-0 bg-black bg-opacity-50">
+    <div id="adicionar-participante" class="w-full h-full fixed top-0 bg-black bg-opacity-50 sm:flex sm:justify-center sm:items-center hidden sm:hidden">
         <div class="fixed top-60 w-[368px] h-[225px] rounded-[10px] mx-4 bg-gray">
-            <div class="flex justify-between items-center px-4 pt-5">
+            <div class="flex justify-between items-center px-4 py-5">
                 <h3 class="text-[20px] text-branco font-bold">Adicionar participantes</h3>
-                <button><i class='bx bx-x text-[18px]' style='color:#ffffff'  ></i></button>
+                <button onclick="fecharAdicionarNome()"><i class='bx bx-x text-[18px]' style='color:#ffffff'  ></i></button>
             </div>
             <form class="flex flex-col gap-3 px-4">
                 <div class="flex flex-col gap-[6px]">
@@ -100,5 +103,7 @@
             </form>
         </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
